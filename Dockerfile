@@ -28,4 +28,3 @@ VOLUME ["/data"]
 WORKDIR /data
 
 ENTRYPOINT ["make"]
-CMD ["-C", "tex"]
