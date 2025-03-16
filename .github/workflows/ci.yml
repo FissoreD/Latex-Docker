@@ -6,7 +6,18 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - dockerfile: ./2023
+            image: latex2023
+          - dockerfile: ./2025
+            image: latex2025
     steps:
+      - 
+        name: Set up Git repository
+        uses: actions/checkout@v3
       -
         name: Login to Docker Hub
         uses: docker/login-action@v3
@@ -24,4 +35,5 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: dfissore/latex2023:latest
+          file: ${{ matrix.dockerfile }}/Dockerfile
+          tags: dfissore/${{ matrix.image }}:latest
