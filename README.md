@@ -10,7 +10,7 @@ Latex version: TeX Live 2023 and 2025
 Example to create and run a container:
 
 ```bash
-docker create --name latex dfissore/custom_latex:v1 && \
+docker create --name latex dfissore/latex:v1 && \
 docker cp PATH_WITH_TEX_SOURCES latex:/data/ && \
 docker start -i latex && docker cp latex:/data/PATH_TO_PDF .
 ```
