@@ -1,10 +1,10 @@
-# Latex2023-Docker
+# Latex-Docker
 
-Image to build latex project with latex compiler version 2023
+Image to build latex project with latex compiler versions 2023 and 2025
 
 ## Technical infos
 OS: Ubuntu 22.04  
-Latex version: TeX Live 2023
+Latex version: TeX Live 2023 and 2025
 
 ## How to use the image
 Example to create and run a container:
