@@ -18,3 +18,8 @@ RUN opam init --disable-sandboxing -y
 RUN opam switch create 4.14.1
 RUN eval $(opam env)
 RUN opam install -y elpi.3.4.2
+
+VOLUME ["/data"]
+WORKDIR /data
+
+ENTRYPOINT ["make"]
