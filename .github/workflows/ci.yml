@@ -16,6 +16,8 @@ jobs:
             image: latex2023
           - dockerfile: ./2025
             image: latex2025
+          - dockerfile: ./2025-elpi
+            image: latex2025-elpi
     steps:
       - 
         name: Set up Git repository
