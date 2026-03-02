@@ -23,6 +23,8 @@ RUN ./install-tl --no-interaction --no-doc-install --no-src-install
 
 ENV PATH=/usr/local/texlive/2025/bin/x86_64-linux:$PATH
 
+RUN echo '{"security" : {"enable_cwd_config": true}}\n' > ~/.latexminted_config
+RUN cat ~/.latexminted_config
 
 VOLUME ["/data"]
 WORKDIR /data
